@@ -1,0 +1,10 @@
+	Date	Time	Omnia File Name	PC File Name	File	Step	Test Type	Pass/Fail	Test Result	Meter 1	Meter 2	Meter 3	Timer	Meter 4	Meter 5	Model Number	Serial Number	Probe	Measuring Device	Test Model #	Test Serial #	Calibration Due Date	Operator ID	Step2
+0	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	1	Run Test	Pass	Pass	270.9 V	0.08 A	5 W	6.0 s	0.00 mA	0.230  	OP - 69544	SN - 1798			Omnia 8106	9520337	07/07/2022	Marilene	1
+1	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	2	AC Withstand	Pass	Pass	3.63 kV	0.305 mA	0.050 mA	1.0 s	 	 	OP - 69544	SN - 1798			Omnia 8106	9520337	07/07/2022	Marilene	2
+2	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	3	Line Leakage	Pass	Pass	270.8 V	1.3 uA	 	10.0 s	 	 	OP - 69544	SN - 1798	Probe-HI to Line	IEC60601, UL2601	Omnia 8106	9520337	07/07/2022	Marilene	3
+3	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	4	Line Leakage	Pass	Pass	270.9 V	1.3 uA	 	10.0 s	 	 	OP - 69544	SN - 1798	Probe-HI to Line	IEC60601, UL2601	Omnia 8106	9520337	07/07/2022	Marilene	4
+4	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	5	Line Leakage	Pass	Pass	270.8 V	1.2 uA	 	10.0 s	 	 	OP - 69544	SN - 1798	Probe-HI to Line	IEC60601, UL2601	Omnia 8106	9520337	07/07/2022	Marilene	5
+5	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	6	Line Leakage	Pass	Pass	270.7 V	1.0 uA	 	10.0 s	 	 	OP - 69544	SN - 1798	Probe-HI to Line	IEC60601, UL2601	Omnia 8106	9520337	07/07/2022	Marilene	6
+6	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	7	Line Leakage	Pass	Pass	271.0 V	0.9 uA	 	10.0 s	 	 	OP - 69544	SN - 1798	Probe-HI to Line	IEC60601, UL2601	Omnia 8106	9520337	07/07/2022	Marilene	7
+7	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	8	Line Leakage	Pass	Pass	270.8 V	0.7 uA	 	10.0 s	 	 	OP - 69544	SN - 1798	Probe-HI to Line	IEC60601, UL2601	Omnia 8106	9520337	07/07/2022	Marilene	8
+8	11/04/2022	09:00	TEMP/	TheraLaseSurgery2016.Omnia	1	9	Run Test	Pass	Pass	270.8 V	0.08 A	5 W	6.0 s	0.00 mA	0.230  	OP - 69544	SN - 1798			Omnia 8106	9520337	07/07/2022	Marilene	9
