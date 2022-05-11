@@ -24,17 +24,22 @@ def readXlsFile(path):
                     names = header, 
                     header=None, skiprows=1)
     
-    data = fixSerialNumber(data)
+    data = fixSerialNumberFromDF(data)
     
     return data
 
-def fixSerialNumber(dataframe):
+def fixSerialNumber(sn):
+    return sn
+    # if len(sn.split(" ")) > 1:
+    #     return a.split(" ")[-1]  
+
+def fixSerialNumberFromDF(dataframe):
     """
     Corrige o número de série, que algumas vezes é 
     escrito erroneamente
     """
     dataframe['Serial Number'] = dataframe['Serial Number'].apply(
-        lambda a: a.split(" ")[-1]  
+        fixSerialNumber  
     )
     return dataframe
 
