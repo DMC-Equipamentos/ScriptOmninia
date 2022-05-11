@@ -1,0 +1,10 @@
+setup.py
+OmniaScript/__init__.py
+OmniaScript/config.py
+OmniaScript/ominiascript.py
+OmniaScript/run.py
+OmniaScript.egg-info/PKG-INFO
+OmniaScript.egg-info/SOURCES.txt
+OmniaScript.egg-info/dependency_links.txt
+OmniaScript.egg-info/entry_points.txt
+OmniaScript.egg-info/top_level.txt
