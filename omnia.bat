@@ -1,0 +1,1 @@
+python -m OmniaScript.run

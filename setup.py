@@ -7,6 +7,6 @@ setup(
             'console_scripts': ['do_omnia=OmniaScript.run:main',],
         },
         install_requires = [
-
+            'pandas',
         ],
         packages=find_packages())

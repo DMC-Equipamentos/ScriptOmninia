@@ -60,3 +60,5 @@ def main():
     omnia.saveFilesSeparate(good_files, data, folder)
     omnia.moveOriginalFileToResults(config.OMNIA_FILE_NAME, folder)
 
+if __name__ == "__main__":
+    main()
