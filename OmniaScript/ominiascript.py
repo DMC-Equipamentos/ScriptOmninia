@@ -72,7 +72,7 @@ def createResultsFolder():
     """
     Cria pasta para guardar todos os resultados
     """
-    name = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    name = datetime.now().strftime("%Y-%m-%d %H-%M-%S")
     os.mkdir(name)
     os.mkdir(os.path.join(name, 'Resultados'))
     return name
