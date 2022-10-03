@@ -4,6 +4,17 @@ import pandas as pd
 from . import config
 import shutil
 
+def findXlsInCurrentFolder():
+    """
+    Acha todos os arquivos com a estensao xls na pasta atual
+    """
+    
+    is_xls = lambda file: file.endswith(".xls") or file.endswith(".xls")
+    
+    return list(filter(is_xls, os.listdir()))
+            
+
+
 def readXlsFile(path):
     """
     Lê o arquivo do omnia

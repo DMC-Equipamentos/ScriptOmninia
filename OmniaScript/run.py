@@ -2,11 +2,25 @@ from multiprocessing import cpu_count
 from . import ominiascript as omnia
 import pandas as pd
 from . import config
-
+import sys
 
 def main():
-    # lê arquivo original
-    data = omnia.readXlsFile(config.OMNIA_FILE_NAME)
+    
+    # encontra arquivos na pasta
+    candidate_files = omnia.findXlsInCurrentFolder()
+    n_files = len(candidate_files)
+    
+    if n_files == 0:
+        print("Nenhum arquivo XLS encontrado")
+        sys.exit(1)
+    elif n_files > 1:
+        print("Múltiplos arquivos XLS encontrados")
+        sys.exit(1)
+    
+    omnia_file = candidate_files[0]
+    
+    # lê arquivo
+    data = omnia.readXlsFile(omnia_file)
     
     # filtra testes PASS
     data_pass = omnia.filterPassedTests(data) 
@@ -58,7 +72,7 @@ def main():
     
     folder = omnia.createResultsFolder()
     omnia.saveFilesSeparate(good_files, data, folder)
-    omnia.moveOriginalFileToResults(config.OMNIA_FILE_NAME, folder)
+    omnia.moveOriginalFileToResults(omnia_file, folder)
 
 if __name__ == "__main__":
     main()
