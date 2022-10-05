@@ -8,5 +8,6 @@ setup(
         },
         install_requires = [
             'pandas',
+            'odfpy'
         ],
         packages=find_packages())

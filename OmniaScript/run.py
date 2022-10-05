@@ -7,7 +7,7 @@ import sys
 def main():
     
     # encontra arquivos na pasta
-    candidate_files = omnia.findXlsInCurrentFolder()
+    candidate_files = omnia.findValidFilesInCurrentFolder()
     n_files = len(candidate_files)
     
     if n_files == 0:
@@ -20,7 +20,7 @@ def main():
     omnia_file = candidate_files[0]
     
     # lê arquivo
-    data = omnia.readXlsFile(omnia_file)
+    data = omnia.readOmniaFile(omnia_file)
     
     # filtra testes PASS
     data_pass = omnia.filterPassedTests(data) 

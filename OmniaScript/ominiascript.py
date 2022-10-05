@@ -3,37 +3,24 @@ import os
 import pandas as pd
 from . import config
 import shutil
+from .filesread import readValidFile
 
-def findXlsInCurrentFolder():
+def findValidFilesInCurrentFolder():
     """
-    Acha todos os arquivos com a estensao xls na pasta atual
+    Acha todos os arquivos com a extensao xls na pasta atual
     """
     
-    is_xls = lambda file: file.endswith(".xls") or file.endswith(".xls")
+    is_valid = lambda file: os.path.splitext(file)[-1] in ['.ods', '.csv', '.xls']
     
-    return list(filter(is_xls, os.listdir()))
-            
+    return list(filter(is_valid, os.listdir()))
 
 
-def readXlsFile(path):
+def readOmniaFile(path):
     """
     Lê o arquivo do omnia
     """
 
-    # HEADERS do arquivo (não deve ser alterado)
-    header = ["Date", "Time", "Omnia File Name", "PC File Name", 
-            "File", "Step", "Test Type", "Pass/Fail", 
-            "Test Result", "Meter 1", "Meter 2", "Meter 3", 
-            "Timer", "Meter 4", "Meter 5", "Model Number", 
-            "Serial Number", "Probe", "Measuring Device", 
-            "Test Model #", "Test Serial #", "Calibration Due Date", 
-            "Operator ID", "Step 2"]
-
-    # lê arquivo csv (não utiliza o HEADER do arquivo, 
-    # que vem faltando a última coluna)
-    data = pd.read_csv(path, sep='\t',
-                    names = header, 
-                    header=None, skiprows=1)
+    data = readValidFile(path)
     
     data = fixSerialNumberFromDF(data)
     
@@ -104,10 +91,11 @@ def saveFilesSeparate(equipments, dataframe, folder):
         equip_data = equip_data.drop_duplicates(subset=['Step'], keep='last')
         
         equip_name = getTestExpectedParams(equipment[0])[0]
-        filename = '{}-{}.xls'.format(equip_name, equipment[1])
+        filename = '{}-{}.ods'.format(equip_name, equipment[1])
         
         # grava em um CSV
-        equip_data.to_csv(os.path.join(folder,'Resultados', filename),sep="\t", index=False)
+        with pd.ExcelWriter(os.path.join(folder,'Resultados', filename), date_format='YYYY-MM-DD') as writer:
+            equip_data.to_excel(writer, index=False)
         
 def moveOriginalFileToResults(file, folder):
     filename = os.path.basename(file)
