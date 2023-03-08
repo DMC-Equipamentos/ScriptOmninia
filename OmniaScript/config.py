@@ -11,4 +11,6 @@ CONFIG_TESTS = {
         ("Therapy", range(1,8)),
     'MediLaserDual_6-INSP-495_rev.04' :
         ("MedilaserDual", range(1,15)),
+    'EmeraldGreenLaser_6-INSP-657_rev.00.Omnia' :
+        ("EmeraldGreenLaser", range(1,10))
 }
