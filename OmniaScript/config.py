@@ -7,6 +7,8 @@ CONFIG_TESTS = {
         ("TheraLaseSurgery", range(1,10)),
     'TheraLaseSurgery_6-INSP-493_rev03.Omnia':
         ("TheraLaseSurgery", range(1,10)),
+    'FamiliaTheraLase_6-INSP-493_rev04.Omnia':
+        ("FamiliaTheraLase", range(1,10)),
     'Therapy.Omnia': 
         ("Therapy", range(1,8)),
     'MediLaserDual_6-INSP-495_rev.04' :
