@@ -33,7 +33,7 @@ def main():
     any_fail = False
 
     # faz verificação
-    for index, steps in steps_grouped.iteritems():
+    for index, steps in steps_grouped.items():
         
         # Busca nas configuraçoes o equipamento, 
         # Caso não encontre, pula

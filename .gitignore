@@ -2,3 +2,5 @@ venv/
 tmp/*
 *.xls
 *.pyc
+
+*.egg-info/

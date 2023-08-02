@@ -7,7 +7,7 @@ from .filesread import readValidFile
 
 def findValidFilesInCurrentFolder():
     """
-    Acha todos os arquivos com a extensao xls na pasta atual
+    Acha todos os arquivos com as extensoes desejadas na pasta atual
     """
     
     is_valid = lambda file: os.path.splitext(file)[-1] in ['.ods', '.csv', '.xls']
@@ -85,7 +85,8 @@ def saveFilesSeparate(equipments, dataframe, folder):
     for equipment in equipments:
         
         # filtra dados do equipamento específico
-        equip_data = dataframe[dataframe["PC File Name"] == equipment[0]][dataframe['Serial Number'] == equipment[1]]
+        equip_data = dataframe[dataframe["PC File Name"] == equipment[0]]
+        equip_data = equip_data[equip_data['Serial Number'] == equipment[1]]
         
         # retira testes duplicados mantendo o último
         equip_data = equip_data.drop_duplicates(subset=['Step'], keep='last')
