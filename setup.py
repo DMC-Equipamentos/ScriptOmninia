@@ -8,6 +8,7 @@ setup(
         },
         install_requires = [
             'pandas',
-            'odfpy'
+            'odfpy',
+            'openpyxl'
         ],
         packages=find_packages())

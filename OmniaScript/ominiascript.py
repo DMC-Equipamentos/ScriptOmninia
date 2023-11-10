@@ -92,7 +92,7 @@ def saveFilesSeparate(equipments, dataframe, folder):
         equip_data = equip_data.drop_duplicates(subset=['Step'], keep='last')
         
         equip_name = getTestExpectedParams(equipment[0])[0]
-        filename = '{}-{}.ods'.format(equip_name, equipment[1])
+        filename = '{}-{}.xlsx'.format(equip_name, equipment[1])
         
         # grava em um CSV
         with pd.ExcelWriter(os.path.join(folder,'Resultados', filename), date_format='YYYY-MM-DD') as writer:

@@ -2,5 +2,5 @@ venv/
 tmp/*
 *.xls
 *.pyc
-
+test-danilo/*
 *.egg-info/
