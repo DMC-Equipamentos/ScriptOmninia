@@ -52,7 +52,9 @@ def detectVersionAndUniform(data):
         del data['Test File Name']
         
         data['Pass/Fail'] = data['Status'].apply(lambda st: st.capitalize())
+        del data['Status']
         
+    print(data)
     return data
 
 
@@ -73,7 +75,7 @@ def readValidFile(path):
     # que vem faltando a última coluna)
 
     if extension in ['.csv', '.xls']:
-        data = pd.read_csv(path, sep=None, engine='python')
+        data = pd.read_csv(path, sep=None, engine='python', index_col=False)
                         # names = header, 
                         # header=None, skiprows=1)
     else :
