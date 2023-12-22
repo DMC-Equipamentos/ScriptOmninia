@@ -27,7 +27,7 @@ CONFIG_TESTS = {
         ("e-lib", range(1,9)),
 
     # vulcan e triplet novos (2023)
-    'Vulcan_6-INSP-0583_rev.00':
+    'Vulcan_6-INSP-0583_rev.00.Omnia':
         ("Vulcan", range(1,17)),
     'Triplet_6-INSP-526_rev.02.Omnia':
         ("FamiliaTriplet", range(1,24)),
