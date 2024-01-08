@@ -32,4 +32,7 @@ CONFIG_TESTS = {
     'Triplet_6-INSP-526_rev.02.Omnia':
         ("FamiliaTriplet", range(1,24)),
 
+    'e-light_6-INSP-0548_rev05.Omnia':
+        ("e-light", range(1,10)),
+
 }
