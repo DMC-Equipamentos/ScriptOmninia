@@ -36,5 +36,6 @@ CONFIG_TESTS = {
 
     'e-light_6-INSP-0548_rev05.Omnia':
         ("e-light", range(1,10)),
-
+    'EasyLaser.Omnia':
+        ("EasyLaser", range(1,15)),
 }
