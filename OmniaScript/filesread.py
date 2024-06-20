@@ -3,12 +3,12 @@ import pandas as pd
 import os
 
 operators = [ # código do operador não aparece no arquivo do omnia novo
-    (1, "Adriana"),
-    (2, "Caio"),
-    (3, "Luis Felipe"),
-    (4, "Maria Luiza"),
-    (5, "Marilene"),
-    (6, "Milton")
+    (1, "Adriana.Bernardeli"),
+    (2, "Erica.Santos"),
+    (3, "Guilherme.Romanholi"),
+    (4, "Luiz.Melo"),
+    (5, "Maria.Goncalves"),
+    (6, "Marilene.Juste"),
 ]
 
 def askForOperator():
