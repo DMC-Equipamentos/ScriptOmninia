@@ -1,7 +1,7 @@
 
 import pandas as pd
 import os
-from config import OPERATORS
+from .config import OPERATORS
 
 operators = OPERATORS
 
