@@ -11,6 +11,7 @@ OPERATORS = [ # código do operador não aparece no arquivo do omnia novo
     (6, "Marilene.Juste"),
     (7, "Maria.Cavichioli"),
     (8, "Julio.Torre"),
+    (9, "Anderson.Augusto"),
 ]
 
 CONFIG_TESTS = {
