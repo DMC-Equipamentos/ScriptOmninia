@@ -43,7 +43,7 @@ CONFIG_TESTS = {
     "D2000_R3": (
         "D-2000", range(1, 7)
         ),
-    "ELIGH_R5": (
+    "ELIGH_R6": (
         "e-light", range(1, 9)
         ),
     "ELITE_R5": (
@@ -68,7 +68,7 @@ CONFIG_TESTS = {
     'Triplet_6-INSP-526_rev.02.Omnia':
         ("FamiliaTriplet", range(1, 24)),
 
-    'e-light_6-INSP-0548_rev05.Omnia':
+    'e-light_6-INSP-0548_rev06.Omnia':
         ("e-light", range(1, 10)),
     'EasyLaser.Omnia':
         ("EasyLaser", range(1, 15)),
