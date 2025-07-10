@@ -45,6 +45,7 @@ def detectVersionAndUniform(data):
         del data['DUT Serial']
         
         data['Operator ID'] = data['User']
+        del data['User']
         
         data['PC File Name'] = data['Test File Name']
         del data['Test File Name']

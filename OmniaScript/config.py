@@ -83,4 +83,7 @@ CONFIG_TESTS = {
         ("MediLaser-Dual", range(1, 14)),
     "FamiliaMedilaser OS - AT.Omnia":
         ("Medilaser", range(1, 14)),
+        
+    "EMERALD_":
+        ("EMERALD", range(1, 18)),    
 }
