@@ -44,7 +44,7 @@ def detectVersionAndUniform(data):
         data['Serial Number'] = data['DUT Serial']
         del data['DUT Serial']
         
-        data['Operator ID'] = askForOperator()
+        data['Operator ID'] = data['User']
         
         data['PC File Name'] = data['Test File Name']
         del data['Test File Name']
@@ -71,7 +71,7 @@ def readValidFile(path):
     # Headers csv (arquivo novo usa headers diferentes)
     headers_csv = [
         'Test ID','Test File Name','Instrument','Serial #','DUT Model',
-        'DUT Serial','Date & Time','Step','Type',
+        'DUT Serial', 'User', 'Date & Time','Step','Type',
         'Status','Meter 1','Meter 2','Meter 3','Meter 4','Meter 5','Meter 6'
     ]
 
