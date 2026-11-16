@@ -50,8 +50,11 @@ def detectVersionAndUniform(data):
         data['PC File Name'] = data['Test File Name']
         del data['Test File Name']
         
-        data['Pass/Fail'] = data['Status'].apply(lambda st: st.capitalize())
+        data['Pass/Fail'] = data['Status'].str.strip().str.capitalize()
         del data['Status']
+    
+    # passo como número (colunas são lidas como texto para preservar o número de série)
+    data['Step'] = pd.to_numeric(data['Step'], errors='coerce').astype('Int64')
         
     return data
 
@@ -80,10 +83,11 @@ def readValidFile(path):
     # que vem faltando a última coluna) quando é xls
     if extension in ['.csv', '.xls']:
         headers = headers_csv if extension == '.csv' else header_xls
+        # dtype=str preserva zeros à esquerda do número de série
         data = pd.read_csv(path, sep=None, engine="python", index_col=False,
-                        names = headers, header=None, skiprows=1)
+                        names = headers, header=None, skiprows=1, dtype=str)
     else :
-        data = pd.read_excel(path, sep = None)
+        data = pd.read_excel(path, dtype=str)
     
     data = detectVersionAndUniform(data)
     

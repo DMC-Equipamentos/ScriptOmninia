@@ -45,6 +45,24 @@ def filterPassedTests(data):
     # filtra testes PASS
     return data[data['Pass/Fail'] == 'Pass'] 
 
+def keepLastExecution(data):
+    """
+    Mantém apenas a última execução de cada passo por equipamento (NS)
+    """
+    return data.drop_duplicates(
+        subset=['PC File Name', 'Serial Number', 'Step'], keep='last'
+    )
+
+def groupPassedSteps(data):
+    """
+    Retorna, por equipamento (NS), a lista de passos aprovados.
+    Equipamentos sem nenhum passo aprovado aparecem com lista vazia.
+    """
+    passed = data['Step'].where(data['Pass/Fail'] == 'Pass')
+    return passed.groupby(
+        [data['PC File Name'], data['Serial Number']]
+    ).apply(lambda st: [s for s in st if pd.notna(s)])
+
 def groupSteps(data):
     """
     Retorna um dataframe dos passos realizados por equipamento (NS)
